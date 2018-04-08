@@ -1,6 +1,6 @@
 <template>
   <div>
-    民生详情
+    中信详情
   </div>
 </template>
 <script>

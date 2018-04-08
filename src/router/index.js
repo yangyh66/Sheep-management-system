@@ -4,7 +4,9 @@ import {myStore} from '../main';
 import index from '@/page/index'
 import login from '@/page/login'
 import msBankUserInfo from '@/page/msBankUserInfo'
+import zxBankUserInfo from '@/page/zxBankUserInfo'
 import msBankDetails from '@/page/msBankDetails'
+import zxBankDetails from '@/page/zxBankDetails'
 
 Vue.use(Router);
 const router = new Router({
@@ -21,6 +23,14 @@ const router = new Router({
         {
           path: 'msBankDetails',
           component: msBankDetails
+        },
+        {
+          path: 'zxBankUserInfo',
+          component: zxBankUserInfo
+        },
+        {
+          path: 'zxBankDetails',
+          component: zxBankDetails
         }
       ]
     },
@@ -28,6 +38,10 @@ const router = new Router({
       path: '/login',
       name: 'login',
       component: login
+    },
+    {
+      path: '/index',
+      redirect: "/msBankUserInfo"
     }
   ]
 })

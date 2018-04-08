@@ -21,8 +21,6 @@
 </template>
 
 <script>
-  import {mapMutations, mapState} from 'vuex';
-
   export default {
     name: "login",
     data() {
@@ -31,15 +29,7 @@
         password: ""
       }
     },
-    computed: {
-      ...mapState({
-        lastRoute: (state) => state.lastRoute
-      })
-    },
     methods: {
-      ...mapMutations({
-        change: 'changeLoginStatus',
-      }),
       login(){
         console.log(this.username,this.password)
         this.$router.push("/index")
